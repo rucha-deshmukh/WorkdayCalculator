@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 public class HolidayServiceImpl implements HolidayService {
 
-    private HolidayRepository repository;
+    private final HolidayRepository repository;
     @Override
     public LocalDate getDate(String isoCode, int offSet, LocalDate startDate) {
         repository.findByIsoCode(isoCode);
